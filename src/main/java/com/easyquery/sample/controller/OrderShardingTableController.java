@@ -79,4 +79,15 @@ public class OrderShardingTableController {
                 .executeRows(1,"并发修改失败");
         return orderEntity;
     }
+    @GetMapping("/delete")
+    public Object delete() {
+        OrderEntity orderEntity = easyQuery.queryable(OrderEntity.class)
+                .asTracking()
+                .where(o->o.eq(OrderEntity::getId,"3")).firstNotNull("未找到对应的订单");
+        orderEntity.setCreateTime(LocalDateTime.now());
+        easyQuery.deletable(orderEntity)
+                .allowDeleteStatement(true)
+                .executeRows();
+        return orderEntity;
+    }
 }
