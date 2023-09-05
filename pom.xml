@@ -31,10 +31,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/com.alibaba/druid &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba</groupId>-->
+<!--			<artifactId>druid</artifactId>-->
+<!--			<version>1.2.15</version>-->
+<!--		</dependency>-->
+
+		<!--druid依赖-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
+			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.2.15</version>
 		</dependency>
 		<!-- mysql驱动 -->
@@ -46,7 +53,7 @@
 		<dependency>
 			<groupId>com.easy-query</groupId>
 			<artifactId>sql-springboot-starter</artifactId>
-			<version>1.4.13</version>
+			<version>1.4.16</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
