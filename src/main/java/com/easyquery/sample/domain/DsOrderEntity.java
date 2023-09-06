@@ -4,6 +4,7 @@ import com.easy.query.core.annotation.Column;
 import com.easy.query.core.annotation.ShardingDataSourceKey;
 import com.easy.query.core.annotation.ShardingTableKey;
 import com.easy.query.core.annotation.Table;
+import com.easy.query.core.annotation.UpdateIgnore;
 import com.easyquery.sample.sharding.initializer.DsOrderShardingInitializer;
 import com.easyquery.sample.sharding.initializer.OrderShardingInitializer;
 import lombok.Data;
@@ -21,6 +22,7 @@ import java.time.LocalDateTime;
 public class DsOrderEntity {
     @Column(primaryKey = true)
     @ShardingDataSourceKey
+    @UpdateIgnore
     private String id;
     private String uid;
     private Integer orderNo;
